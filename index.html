@@ -4,36 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог товаров</title>
+    <title>KeyCraft — магазин механических клавиатур</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Учебный интернет-магазин</h1>
+        <div class="site-header">
+            <a class="site-logo" href="index.html">KeyCraft</a>
+
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#popular">Популярные товары</a></li>
+                    <li><a href="#advantages">Преимущества</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section>
-            <h2>Главная страница проекта</h2>
+        <section class="hero">
+            <h1>KeyCraft — механические клавиатуры</h1>
             <p>
-                Это стартовая страница учебного frontend-проекта.
-                В дальнейшем здесь будет разработан многостраничный сайт
-                интернет-магазина или каталога услуг.
+                Клавиатуры, свитчи и кейкапы для работы, учёбы и игр.
+                Поможем подобрать клавиатуру под ваш стиль печати.
             </p>
+            <a class="button" href="#popular">Перейти к товарам</a>
         </section>
-        <section>
-            <h2>О проекте</h2>
+
+        <section class="section" id="advantages">
+            <h2>Почему выбирают KeyCraft</h2>
+            <ul class="advantages-list">
+                <li>только проверенные клавиатуры и комплектующие;</li>
+                <li>можно заранее выбрать тип свитчей;</li>
+                <li>гарантия 12 месяцев на все клавиатуры;</li>
+                <li>доставка по всей России.</li>
+            </ul>
+        </section>
+
+        <section class="section" id="popular">
+            <h2>Популярные товары</h2>
+
+            <article class="product-card">
+                <h3>KeyCraft One 75%</h3>
+                <p>Компактная клавиатура с hot-swap и белой подсветкой.</p>
+                <p>Цена: 7 490 руб.</p>
+            </article>
+
+            <article class="product-card">
+                <h3>KeyCraft TKL Pro</h3>
+                <p>Клавиатура без цифрового блока, алюминиевый корпус.</p>
+                <p>Цена: 11 990 руб.</p>
+            </article>
+
+            <article class="product-card">
+                <h3>Набор свитчей Linear Red</h3>
+                <p>40 линейных свитчей с плавным ходом для тихой печати.</p>
+                <p>Цена: 1 890 руб.</p>
+            </article>
+        </section>
+
+        <aside class="aside-info">
+            <h2>Скоро на сайте</h2>
             <p>
-                В рамках данного проекта будет разработан многостраничный сайт
-                интернет-магазина или каталога услуг. Проект будет постепенно
-                расширяться на следующих практических занятиях.
+                Сейчас это стартовая страница проекта. Дальше здесь появятся
+                каталог, страница товара, форма заявки и контакты магазина.
             </p>
-        </section>
+        </aside>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Учебный проект</p>
+    <footer id="contacts">
+        <p>&copy; 2026 KeyCraft. Учебный проект.</p>
+        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
 </body>
 
