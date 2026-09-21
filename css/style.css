@@ -107,14 +107,21 @@ footer {
   margin-top: 0;
 }
 
-/* Ссылка, оформленная как кнопка */
+/*
+  Общий класс кнопки.
+  Используется и для ссылки, и для тега button,
+  поэтому убираем рамку браузера и наследуем шрифт страницы.
+*/
 .button {
   display: inline-block;
   padding: 10px 16px;
   color: #ffffff;
   background-color: #0057b8;
   text-decoration: none;
+  border: none;
   border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -132,4 +139,95 @@ footer {
 
 .aside-info h2 {
   margin-top: 0;
+}
+
+/*
+  Модальное окно заявки.
+  Элемент dialog сам умеет открываться поверх страницы,
+  поэтому позиционирование вручную не требуется.
+*/
+.order-dialog {
+  width: min(100% - 32px, 560px);
+  padding: 24px;
+  border: none;
+  border-radius: 12px;
+}
+
+.order-dialog h2 {
+  margin-top: 0;
+}
+
+/* Затемнение фона за модальным окном */
+.order-dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Каждое поле формы получает нижний отступ */
+.form-field {
+  margin-bottom: 16px;
+}
+
+/* Подпись поля располагается над самим полем */
+.form-field label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Основные поля формы занимают всю ширину окна */
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+/* Флажок согласия не должен растягиваться на всю ширину */
+.form-field input[type="checkbox"] {
+  width: auto;
+}
+
+/* Подсказка о формате телефона */
+.form-field small {
+  display: block;
+  margin-top: 4px;
+  color: #666666;
+}
+
+/* Видимый фокус для навигации с клавиатуры */
+.form-field input:focus-visible,
+.form-field select:focus-visible,
+.form-field textarea:focus-visible,
+.form-actions button:focus-visible {
+  outline: 2px solid #0057b8;
+  outline-offset: 2px;
+}
+
+/*
+  Подсветка ошибочных полей.
+  Атрибут aria-invalid добавляется из JavaScript при отправке формы.
+  Селектор начинается с .form-field, потому что цвет рамки задан
+  правилом .form-field input. Без этого специфичность была бы ниже,
+  и красная рамка не применилась бы.
+*/
+.form-field [aria-invalid="true"] {
+  border-color: #b00020;
+}
+
+/* Кнопки формы располагаются в одну строку */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Сообщение об успешной отправке заявки */
+.success-message {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 16px;
+  border-left: 4px solid #168a2f;
+  background-color: #eefaf0;
 }
