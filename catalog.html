@@ -37,7 +37,7 @@
             <h1>Каталог</h1>
             <p>
                 Механические клавиатуры и комплектующие для них.
-                Позже здесь появятся фильтры, сортировка и отдельные страницы товаров.
+                Позже здесь появятся сортировка и отдельные страницы товаров.
             </p>
             <p>
                 Разделы: <a href="#keyboards">Клавиатуры</a>,
@@ -45,55 +45,100 @@
             </p>
         </section>
 
-        <section class="section" id="keyboards">
-            <h2>Клавиатуры</h2>
+        <div class="catalog-layout">
+            <aside class="catalog-filters">
+                <h2>Фильтры</h2>
 
-            <article class="product-card">
-                <h3>KeyCraft One 75%</h3>
-                <p>Компактная клавиатура с hot-swap и белой подсветкой.</p>
-                <p>Цена: 7 490 руб.</p>
-                <a class="button" href="index.html#popular">Подробнее</a>
-            </article>
+                <form class="filters-form" action="#" method="get">
+                    <fieldset>
+                        <legend>Категория</legend>
 
-            <article class="product-card">
-                <h3>KeyCraft TKL Pro</h3>
-                <p>Клавиатура без цифрового блока, алюминиевый корпус.</p>
-                <p>Цена: 11 990 руб.</p>
-                <a class="button" href="index.html#popular">Подробнее</a>
-            </article>
+                        <label>
+                            <input type="checkbox" name="category" value="keyboards">
+                            Клавиатуры
+                        </label>
 
-            <article class="product-card">
-                <h3>KeyCraft Full 100%</h3>
-                <p>Полноразмерная клавиатура с цифровым блоком и кейкапами из PBT.</p>
-                <p>Цена: 9 990 руб.</p>
-                <a class="button" href="index.html#popular">Подробнее</a>
-            </article>
-        </section>
+                        <label>
+                            <input type="checkbox" name="category" value="switches">
+                            Свитчи
+                        </label>
 
-        <section class="section" id="parts">
-            <h2>Свитчи и кейкапы</h2>
+                        <label>
+                            <input type="checkbox" name="category" value="keycaps">
+                            Кейкапы
+                        </label>
+                    </fieldset>
 
-            <article class="product-card">
-                <h3>Набор свитчей Linear Red</h3>
-                <p>40 линейных свитчей с плавным ходом для тихой печати.</p>
-                <p>Цена: 1 890 руб.</p>
-                <a class="button" href="index.html#popular">Подробнее</a>
-            </article>
+                    <fieldset>
+                        <legend>Цена, руб.</legend>
 
-            <article class="product-card">
-                <h3>Набор свитчей Tactile Brown</h3>
-                <p>40 тактильных свитчей: ощутимый отклик при нажатии, но без щелчка.</p>
-                <p>Цена: 1 990 руб.</p>
-                <a class="button" href="index.html#popular">Подробнее</a>
-            </article>
+                        <label for="price-from">От</label>
+                        <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
 
-            <article class="product-card">
-                <h3>Кейкапы PBT Classic</h3>
-                <p>Набор из 128 кейкапов из PBT-пластика, раскладка RU/EN.</p>
-                <p>Цена: 3 490 руб.</p>
-                <a class="button" href="index.html#popular">Подробнее</a>
-            </article>
-        </section>
+                        <label for="price-to">До</label>
+                        <input id="price-to" name="price-to" type="number" min="0" placeholder="15000">
+                    </fieldset>
+
+                    <button class="button" type="submit">Применить</button>
+                </form>
+            </aside>
+
+            <div class="catalog-products">
+                <section class="section" id="keyboards">
+                    <h2>Клавиатуры</h2>
+
+                    <div class="products-grid">
+                        <article class="product-card">
+                            <h3>KeyCraft One 75%</h3>
+                            <p>Компактная клавиатура с hot-swap и белой подсветкой.</p>
+                            <p>Цена: 7 490 руб.</p>
+                            <a class="button" href="index.html#popular">Подробнее</a>
+                        </article>
+
+                        <article class="product-card">
+                            <h3>KeyCraft TKL Pro</h3>
+                            <p>Клавиатура без цифрового блока, алюминиевый корпус.</p>
+                            <p>Цена: 11 990 руб.</p>
+                            <a class="button" href="index.html#popular">Подробнее</a>
+                        </article>
+
+                        <article class="product-card">
+                            <h3>KeyCraft Full 100%</h3>
+                            <p>Полноразмерная клавиатура с цифровым блоком и кейкапами из PBT.</p>
+                            <p>Цена: 9 990 руб.</p>
+                            <a class="button" href="index.html#popular">Подробнее</a>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section" id="parts">
+                    <h2>Свитчи и кейкапы</h2>
+
+                    <div class="products-grid">
+                        <article class="product-card">
+                            <h3>Набор свитчей Linear Red</h3>
+                            <p>40 линейных свитчей с плавным ходом для тихой печати.</p>
+                            <p>Цена: 1 890 руб.</p>
+                            <a class="button" href="index.html#popular">Подробнее</a>
+                        </article>
+
+                        <article class="product-card">
+                            <h3>Набор свитчей Tactile Brown</h3>
+                            <p>40 тактильных свитчей: ощутимый отклик при нажатии, но без щелчка.</p>
+                            <p>Цена: 1 990 руб.</p>
+                            <a class="button" href="index.html#popular">Подробнее</a>
+                        </article>
+
+                        <article class="product-card">
+                            <h3>Кейкапы PBT Classic</h3>
+                            <p>Набор из 128 кейкапов из PBT-пластика, раскладка RU/EN.</p>
+                            <p>Цена: 3 490 руб.</p>
+                            <a class="button" href="index.html#popular">Подробнее</a>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
 
     <footer id="contacts">
