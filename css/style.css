@@ -37,6 +37,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -75,6 +79,12 @@ a:hover {
 a:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 3px;
+}
+
+:target {
+  outline: 2px dashed var(--color-primary);
+  outline-offset: 4px;
+  scroll-margin-top: var(--space-lg);
 }
 
 /* Общий класс кнопки. */
@@ -211,6 +221,27 @@ a:focus-visible {
 
 .aside-info h2 {
   margin-top: 0;
+}
+
+/* Навигационная цепочка на внутренних страницах */
+.breadcrumbs {
+  max-width: var(--container-width);
+  margin: 0 auto var(--space-md);
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.breadcrumbs a {
+  color: var(--color-primary);
+}
+
+.breadcrumbs span::before {
+  content: " / ";
+  color: var(--color-muted);
+}
+
+.contacts-list {
+  font-style: normal;
 }
 
 /* ===============================
