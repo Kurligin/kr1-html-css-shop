@@ -1,66 +1,62 @@
 const orderDialog = document.getElementById('order-dialog');
-
+const orderForm = document.getElementById('order-form');
+const successMessage = document.getElementById('success-message');
+const selectedProductInput = document.getElementById('selected-product');
+const closeDialogButton = document.getElementById('close-order-dialog');
 const orderButtons = document.querySelectorAll('.product-card__button');
 
-const closeDialogButton = document.getElementById('close-order-dialog');
-
-const selectedProductInput = document.getElementById('selected-product');
-
-const orderForm = document.getElementById('order-form');
-
-const successMessage = document.getElementById('success-message');
-
-orderButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const productName = button.dataset.product;
-
-    selectedProductInput.value = productName;
-
-    successMessage.hidden = true;
-
-    orderDialog.showModal();
+if (orderDialog && orderForm) {
+  orderButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      selectedProductInput.value = button.dataset.product;
+      successMessage.hidden = true;
+      orderDialog.showModal();
+    });
   });
-});
 
-closeDialogButton.addEventListener('click', () => {
-  orderDialog.close();
-});
-
-orderDialog.addEventListener('close', () => {
-  orderForm.reset();
-
-  Array.from(orderForm.elements).forEach((element) => {
-    element.removeAttribute('aria-invalid');
+  closeDialogButton.addEventListener('click', () => {
+    orderDialog.close();
   });
-});
 
-orderForm.addEventListener('submit', (event) => {
-  event.preventDefault();
+  orderDialog.addEventListener('close', () => {
+    orderForm.reset();
 
-  const formElements = Array.from(orderForm.elements);
-
-  formElements.forEach((element) => {
-    if (element.willValidate) {
+    Array.from(orderForm.elements).forEach((element) => {
       element.removeAttribute('aria-invalid');
-    }
+    });
   });
+}
 
-  if (!orderForm.checkValidity()) {
+if (orderForm) {
+  orderForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const formElements = Array.from(orderForm.elements);
+
     formElements.forEach((element) => {
-      if (element.willValidate && !element.checkValidity()) {
-        element.setAttribute('aria-invalid', 'true');
+      if (element.willValidate) {
+        element.removeAttribute('aria-invalid');
       }
     });
 
-    orderForm.reportValidity();
-    return;
-  }
+    if (!orderForm.checkValidity()) {
+      formElements.forEach((element) => {
+        if (element.willValidate && !element.checkValidity()) {
+          element.setAttribute('aria-invalid', 'true');
+        }
+      });
 
-  successMessage.hidden = false;
+      orderForm.reportValidity();
+      return;
+    }
 
-  orderForm.reset();
+    successMessage.hidden = false;
+    orderForm.reset();
 
-  orderDialog.close();
+    if (orderDialog) {
+      orderDialog.close();
+    }
 
-  successMessage.scrollIntoView({ block: 'center' });
-});
+    successMessage.scrollIntoView({ block: 'center' });
+  });
+}

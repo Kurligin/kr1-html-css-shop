@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header class="site-header">
+    <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">KeyCraft</a>
 
@@ -23,16 +23,13 @@
                         <a class="site-nav__link" href="catalog.html">Каталог</a>
                     </li>
                     <li class="site-nav__item">
+                        <a class="site-nav__link" href="product.html">Товар</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="order.html">Оформить заявку</a>
+                    </li>
+                    <li class="site-nav__item">
                         <a class="site-nav__link site-nav__link--active" aria-current="page" href="contacts.html">Контакты</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
                     </li>
                 </ul>
             </nav>
@@ -65,21 +62,42 @@
         <section class="section" id="feedback">
             <h2 class="section__title">Обратная связь</h2>
             <p>
-                Чтобы оставить заявку, выберите товар на главной странице
-                и нажмите «Заказать» — откроется форма заявки.
+                Оставьте заявку на отдельной странице или выберите товар
+                на главной и нажмите «Заказать» — откроется форма в модальном окне.
             </p>
-            <a class="button button--primary" href="index.html#popular">Перейти к товарам</a>
+            <div class="contacts-actions">
+                <a class="button button--primary" href="order.html">Оформить заявку</a>
+                <a class="button button--secondary" href="catalog.html">Перейти в каталог</a>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer" id="contacts">
-        <p class="site-footer__text">
-            Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a>,
-            e-mail: <a href="mailto:info@example.com">info@example.com</a>
-        </p>
+        <div class="site-footer__inner">
+            <div class="site-footer__col">
+                <p class="site-footer__text">
+                    Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+                </p>
+                <p class="site-footer__text">
+                    E-mail: <a href="mailto:info@example.com">info@example.com</a>
+                </p>
+            </div>
+
+            <nav class="site-footer__col" aria-label="Разделы сайта">
+                <ul class="site-footer__list">
+                    <li><a href="index.html#advantages">Преимущества</a></li>
+                    <li><a href="index.html#popular">Популярные товары</a></li>
+                    <li><a href="catalog.html#keyboards">Клавиатуры</a></li>
+                    <li><a href="catalog.html#parts">Свитчи и кейкапы</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <p class="site-footer__text">&copy; 2026 KeyCraft. Учебный проект.</p>
         <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
+
+    <a class="scroll-top" href="#top">Наверх</a>
 </body>
 
 </html>
