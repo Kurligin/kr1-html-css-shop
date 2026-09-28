@@ -10,31 +10,43 @@
 </head>
 
 <body>
-    <header>
-        <div class="site-header">
-            <a class="site-logo" href="index.html">KeyCraft</a>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="index.html">KeyCraft</a>
 
             <nav class="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                    <li><a href="index.html#advantages">Преимущества</a></li>
-                    <li><a href="index.html#popular">Популярные товары</a></li>
-                    <li><a href="index.html#contacts">Обратная связь</a></li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--active" aria-current="page" href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main class="page">
         <nav class="breadcrumbs" aria-label="Навигационная цепочка">
-            <a href="index.html">Главная</a>
-            <span>Каталог</span>
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+            <span class="breadcrumbs__current">Каталог</span>
         </nav>
 
         <section class="section">
-            <h1>Каталог</h1>
+            <h1 class="section__title">Каталог</h1>
             <p>
                 Механические клавиатуры и комплектующие для них.
                 Позже здесь появятся сортировка и отдельные страницы товаров.
@@ -46,94 +58,94 @@
         </section>
 
         <div class="catalog-layout">
-            <aside class="catalog-filters">
-                <h2>Фильтры</h2>
+            <aside class="catalog-filters catalog-layout__filters">
+                <h2 class="catalog-filters__title">Фильтры</h2>
 
                 <form class="filters-form" action="#" method="get">
-                    <fieldset>
-                        <legend>Категория</legend>
+                    <fieldset class="filters-form__group">
+                        <legend class="filters-form__legend">Категория</legend>
 
-                        <label>
-                            <input type="checkbox" name="category" value="keyboards">
+                        <label class="filters-form__label">
+                            <input class="filters-form__checkbox" type="checkbox" name="category" value="keyboards">
                             Клавиатуры
                         </label>
 
-                        <label>
-                            <input type="checkbox" name="category" value="switches">
+                        <label class="filters-form__label">
+                            <input class="filters-form__checkbox" type="checkbox" name="category" value="switches">
                             Свитчи
                         </label>
 
-                        <label>
-                            <input type="checkbox" name="category" value="keycaps">
+                        <label class="filters-form__label">
+                            <input class="filters-form__checkbox" type="checkbox" name="category" value="keycaps">
                             Кейкапы
                         </label>
                     </fieldset>
 
-                    <fieldset>
-                        <legend>Цена, руб.</legend>
+                    <fieldset class="filters-form__group">
+                        <legend class="filters-form__legend">Цена, руб.</legend>
 
-                        <label for="price-from">От</label>
-                        <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+                        <label class="filters-form__label" for="price-from">От</label>
+                        <input class="filters-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
 
-                        <label for="price-to">До</label>
-                        <input id="price-to" name="price-to" type="number" min="0" placeholder="15000">
+                        <label class="filters-form__label" for="price-to">До</label>
+                        <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="15000">
                     </fieldset>
 
-                    <button class="button" type="submit">Применить</button>
+                    <button class="button button--primary" type="submit">Применить</button>
                 </form>
             </aside>
 
-            <div class="catalog-products">
+            <div class="catalog-layout__products">
                 <section class="section" id="keyboards">
-                    <h2>Клавиатуры</h2>
+                    <h2 class="section__title">Клавиатуры</h2>
 
                     <div class="products-grid">
                         <article class="product-card">
-                            <h3>KeyCraft One 75%</h3>
-                            <p>Компактная клавиатура с hot-swap и белой подсветкой.</p>
-                            <p>Цена: 7 490 руб.</p>
-                            <a class="button" href="index.html#popular">Подробнее</a>
+                            <h3 class="product-card__title">KeyCraft One 75%</h3>
+                            <p class="product-card__description">Компактная клавиатура с hot-swap и белой подсветкой.</p>
+                            <p class="product-card__price">Цена: 7 490 руб.</p>
+                            <a class="button button--primary product-card__link" href="index.html#popular">Подробнее</a>
                         </article>
 
                         <article class="product-card">
-                            <h3>KeyCraft TKL Pro</h3>
-                            <p>Клавиатура без цифрового блока, алюминиевый корпус.</p>
-                            <p>Цена: 11 990 руб.</p>
-                            <a class="button" href="index.html#popular">Подробнее</a>
+                            <h3 class="product-card__title">KeyCraft TKL Pro</h3>
+                            <p class="product-card__description">Клавиатура без цифрового блока, алюминиевый корпус.</p>
+                            <p class="product-card__price">Цена: 11 990 руб.</p>
+                            <a class="button button--primary product-card__link" href="index.html#popular">Подробнее</a>
                         </article>
 
                         <article class="product-card">
-                            <h3>KeyCraft Full 100%</h3>
-                            <p>Полноразмерная клавиатура с цифровым блоком и кейкапами из PBT.</p>
-                            <p>Цена: 9 990 руб.</p>
-                            <a class="button" href="index.html#popular">Подробнее</a>
+                            <h3 class="product-card__title">KeyCraft Full 100%</h3>
+                            <p class="product-card__description">Полноразмерная клавиатура с цифровым блоком и кейкапами из PBT.</p>
+                            <p class="product-card__price">Цена: 9 990 руб.</p>
+                            <a class="button button--primary product-card__link" href="index.html#popular">Подробнее</a>
                         </article>
                     </div>
                 </section>
 
                 <section class="section" id="parts">
-                    <h2>Свитчи и кейкапы</h2>
+                    <h2 class="section__title">Свитчи и кейкапы</h2>
 
                     <div class="products-grid">
                         <article class="product-card">
-                            <h3>Набор свитчей Linear Red</h3>
-                            <p>40 линейных свитчей с плавным ходом для тихой печати.</p>
-                            <p>Цена: 1 890 руб.</p>
-                            <a class="button" href="index.html#popular">Подробнее</a>
+                            <h3 class="product-card__title">Набор свитчей Linear Red</h3>
+                            <p class="product-card__description">40 линейных свитчей с плавным ходом для тихой печати.</p>
+                            <p class="product-card__price">Цена: 1 890 руб.</p>
+                            <a class="button button--primary product-card__link" href="index.html#popular">Подробнее</a>
                         </article>
 
                         <article class="product-card">
-                            <h3>Набор свитчей Tactile Brown</h3>
-                            <p>40 тактильных свитчей: ощутимый отклик при нажатии, но без щелчка.</p>
-                            <p>Цена: 1 990 руб.</p>
-                            <a class="button" href="index.html#popular">Подробнее</a>
+                            <h3 class="product-card__title">Набор свитчей Tactile Brown</h3>
+                            <p class="product-card__description">40 тактильных свитчей: ощутимый отклик при нажатии, но без щелчка.</p>
+                            <p class="product-card__price">Цена: 1 990 руб.</p>
+                            <a class="button button--primary product-card__link" href="index.html#popular">Подробнее</a>
                         </article>
 
                         <article class="product-card">
-                            <h3>Кейкапы PBT Classic</h3>
-                            <p>Набор из 128 кейкапов из PBT-пластика, раскладка RU/EN.</p>
-                            <p>Цена: 3 490 руб.</p>
-                            <a class="button" href="index.html#popular">Подробнее</a>
+                            <h3 class="product-card__title">Кейкапы PBT Classic</h3>
+                            <p class="product-card__description">Набор из 128 кейкапов из PBT-пластика, раскладка RU/EN.</p>
+                            <p class="product-card__price">Цена: 3 490 руб.</p>
+                            <a class="button button--primary product-card__link" href="index.html#popular">Подробнее</a>
                         </article>
                     </div>
                 </section>
@@ -141,13 +153,13 @@
         </div>
     </main>
 
-    <footer id="contacts">
-        <p>
+    <footer class="site-footer" id="contacts">
+        <p class="site-footer__text">
             Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a>,
             e-mail: <a href="mailto:info@example.com">info@example.com</a>
         </p>
-        <p>&copy; 2026 KeyCraft. Учебный проект.</p>
-        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+        <p class="site-footer__text">&copy; 2026 KeyCraft. Учебный проект.</p>
+        <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
 </body>
 
