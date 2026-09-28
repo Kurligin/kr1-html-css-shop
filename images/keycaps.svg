@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-label="Набор кейкапов из PBT-пластика">
+  <defs>
+    <g id="cap">
+      <path d="M0 68 L12 10 Q14 0 24 0 L64 0 Q74 0 76 10 L88 68 Q89 76 80 76 L8 76 Q-1 76 0 68 Z"
+        fill="#ffffff" stroke="#dddddd" stroke-width="2" />
+      <path d="M14 14 L74 14 L80 60 L8 60 Z" fill="#eef5ff" stroke="#0057b8" stroke-width="1.5" />
+    </g>
+  </defs>
+  <rect x="8" y="24" width="384" height="152" rx="16" fill="#f7f7f7" stroke="#dddddd" stroke-width="2" />
+  <use href="#cap" x="48" y="58" />
+  <use href="#cap" x="156" y="58" />
+  <use href="#cap" x="264" y="58" />
+</svg>

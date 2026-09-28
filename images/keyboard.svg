@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-label="Механическая клавиатура">
+  <defs>
+    <pattern id="keys" width="30" height="30" patternUnits="userSpaceOnUse">
+      <rect x="3" y="3" width="24" height="24" rx="5" fill="#ffffff" stroke="#dddddd" stroke-width="1.5" />
+    </pattern>
+  </defs>
+  <rect x="8" y="24" width="384" height="152" rx="16" fill="#eef5ff" stroke="#0057b8" stroke-width="2" />
+  <rect x="26" y="42" width="348" height="88" fill="url(#keys)" />
+  <rect x="26" y="136" width="54" height="24" rx="5" fill="#ffffff" stroke="#dddddd" stroke-width="1.5" />
+  <rect x="86" y="136" width="200" height="24" rx="5" fill="#ffffff" stroke="#dddddd" stroke-width="1.5" />
+  <rect x="292" y="136" width="82" height="24" rx="5" fill="#ffffff" stroke="#dddddd" stroke-width="1.5" />
+</svg>

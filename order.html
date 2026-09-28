@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Оформление заявки в магазине KeyCraft: выберите товар, укажите контакты и удобное время связи.">
+    <title>Оформление заявки — KeyCraft</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header" id="top">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="index.html">KeyCraft</a>
+
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="site-nav__list">
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="product.html">Товар</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--active" aria-current="page" href="order.html">Оформить заявку</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="contacts.html">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <nav class="breadcrumbs" aria-label="Навигационная цепочка">
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+            <span class="breadcrumbs__current">Оформление заявки</span>
+        </nav>
+
+        <section class="section">
+            <h1 class="section__title">Оформление заявки</h1>
+            <p>
+                Заполните форму — менеджер перезвонит в выбранное время,
+                уточнит комплектацию и рассчитает доставку.
+            </p>
+        </section>
+
+        <div class="order-layout">
+            <section class="section order-layout__form">
+                <h2 class="section__title">Данные заявки</h2>
+
+                <form class="order-form" id="order-form" action="#" method="post" novalidate>
+                    <div class="order-form__field">
+                        <label class="order-form__label" for="order-product">Товар</label>
+                        <select class="order-form__select" id="order-product" name="product" required>
+                            <option value="">Выберите товар</option>
+                            <option value="KeyCraft One 75%">KeyCraft One 75% — 7 490 руб.</option>
+                            <option value="KeyCraft TKL Pro">KeyCraft TKL Pro — 11 990 руб.</option>
+                            <option value="KeyCraft Full 100%">KeyCraft Full 100% — 9 990 руб.</option>
+                            <option value="Набор свитчей Linear Red">Набор свитчей Linear Red — 1 890 руб.</option>
+                            <option value="Набор свитчей Tactile Brown">Набор свитчей Tactile Brown — 1 990 руб.</option>
+                            <option value="Кейкапы PBT Classic">Кейкапы PBT Classic — 3 490 руб.</option>
+                        </select>
+                    </div>
+
+                    <div class="order-form__field">
+                        <label class="order-form__label" for="order-name">Имя</label>
+                        <input
+                            class="order-form__input"
+                            id="order-name"
+                            name="name"
+                            type="text"
+                            placeholder="Введите ваше имя"
+                            minlength="2"
+                            autocomplete="given-name"
+                            required
+                        >
+                    </div>
+
+                    <div class="order-form__field">
+                        <label class="order-form__label" for="order-email">E-mail</label>
+                        <input
+                            class="order-form__input"
+                            id="order-email"
+                            name="email"
+                            type="email"
+                            placeholder="example@mail.ru"
+                            autocomplete="email"
+                            required
+                        >
+                    </div>
+
+                    <div class="order-form__field">
+                        <label class="order-form__label" for="order-phone">Телефон</label>
+                        <input
+                            class="order-form__input"
+                            id="order-phone"
+                            name="phone"
+                            type="tel"
+                            inputmode="tel"
+                            placeholder="+7 (900) 000-00-00"
+                            pattern="^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+                            required
+                        >
+                        <small class="order-form__hint">Формат: +7 (900) 000-00-00</small>
+                    </div>
+
+                    <div class="order-form__field">
+                        <label class="order-form__label" for="order-date">Дата связи</label>
+                        <input class="order-form__input" id="order-date" name="date" type="date">
+                    </div>
+
+                    <div class="order-form__field">
+                        <label class="order-form__label" for="order-time">Удобное время</label>
+                        <select class="order-form__select" id="order-time" name="time">
+                            <option value="any">В любое время</option>
+                            <option value="morning">С 10:00 до 13:00</option>
+                            <option value="day">С 13:00 до 17:00</option>
+                            <option value="evening">С 17:00 до 20:00</option>
+                        </select>
+                    </div>
+
+                    <div class="order-form__field">
+                        <label class="order-form__label" for="order-delivery">Способ получения</label>
+                        <select class="order-form__select" id="order-delivery" name="delivery" required>
+                            <option value="">Выберите способ</option>
+                            <option value="pickup">Самовывоз из шоурума</option>
+                            <option value="courier">Курьер по Москве</option>
+                            <option value="post">Доставка по России</option>
+                        </select>
+                    </div>
+
+                    <div class="order-form__field">
+                        <label class="order-form__label" for="order-comment">Комментарий</label>
+                        <textarea
+                            class="order-form__textarea"
+                            id="order-comment"
+                            name="comment"
+                            rows="4"
+                            placeholder="Укажите тип свитчей, раскладку или другие пожелания"
+                        ></textarea>
+                    </div>
+
+                    <div class="order-form__field order-form__field--checkbox">
+                        <label class="order-form__label">
+                            <input class="order-form__checkbox" id="order-agreement" name="agreement" type="checkbox" required>
+                            Я согласен на обработку данных
+                        </label>
+                    </div>
+
+                    <p class="success-message" id="success-message" role="status" hidden>
+                        Заявка отправлена! Менеджер свяжется с вами в выбранное время.
+                    </p>
+
+                    <div class="order-form__actions">
+                        <a class="button button--secondary" href="catalog.html">Вернуться в каталог</a>
+                        <button class="button button--primary" type="submit">Отправить заявку</button>
+                    </div>
+                </form>
+            </section>
+
+            <aside class="order-aside order-layout__aside">
+                <h2 class="order-aside__title">Как проходит заказ</h2>
+
+                <ol class="order-steps">
+                    <li class="order-steps__item">Вы оставляете заявку на этой странице.</li>
+                    <li class="order-steps__item">Менеджер перезванивает в выбранное время.</li>
+                    <li class="order-steps__item">Уточняем свитчи, раскладку и способ доставки.</li>
+                    <li class="order-steps__item">Отправляем заказ и присылаем трек-номер.</li>
+                </ol>
+
+                <p class="order-aside__note">
+                    Оплата после согласования заказа. Предоплату не берём.
+                </p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+        <div class="site-footer__inner">
+            <div class="site-footer__col">
+                <p class="site-footer__text">
+                    Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+                </p>
+                <p class="site-footer__text">
+                    E-mail: <a href="mailto:info@example.com">info@example.com</a>
+                </p>
+            </div>
+
+            <nav class="site-footer__col" aria-label="Разделы сайта">
+                <ul class="site-footer__list">
+                    <li><a href="index.html#advantages">Преимущества</a></li>
+                    <li><a href="index.html#popular">Популярные товары</a></li>
+                    <li><a href="catalog.html#keyboards">Клавиатуры</a></li>
+                    <li><a href="catalog.html#parts">Свитчи и кейкапы</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <p class="site-footer__text">&copy; 2026 KeyCraft. Учебный проект.</p>
+        <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+    </footer>
+
+    <a class="scroll-top" href="#top">Наверх</a>
+</body>
+
+</html>

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class="site-header">
+    <header class="site-header" id="top">
         <div class="site-header__inner">
             <a class="site-header__logo" href="index.html">KeyCraft</a>
 
@@ -24,16 +24,13 @@
                         <a class="site-nav__link" href="catalog.html">Каталог</a>
                     </li>
                     <li class="site-nav__item">
+                        <a class="site-nav__link" href="product.html">Товар</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="order.html">Оформить заявку</a>
+                    </li>
+                    <li class="site-nav__item">
                         <a class="site-nav__link" href="contacts.html">Контакты</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
-                    </li>
-                    <li class="site-nav__item">
-                        <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
                     </li>
                 </ul>
             </nav>
@@ -64,7 +61,10 @@
             <h2 class="section__title">Популярные товары</h2>
 
             <div class="products-grid">
-                <article class="product-card">
+                <article class="product-card product-card--hit">
+                    <img class="product-card__image" src="images/keyboard.svg" width="400" height="200"
+                        alt="Клавиатура KeyCraft One 75%">
+                    <span class="product-card__badge">Хит</span>
                     <h3 class="product-card__title">KeyCraft One 75%</h3>
                     <p class="product-card__description">Компактная клавиатура с hot-swap и белой подсветкой.</p>
                     <p class="product-card__price">Цена: 7 490 руб.</p>
@@ -74,6 +74,8 @@
                 </article>
 
                 <article class="product-card">
+                    <img class="product-card__image" src="images/keyboard.svg" width="400" height="200"
+                        alt="Клавиатура KeyCraft TKL Pro">
                     <h3 class="product-card__title">KeyCraft TKL Pro</h3>
                     <p class="product-card__description">Клавиатура без цифрового блока, алюминиевый корпус.</p>
                     <p class="product-card__price">Цена: 11 990 руб.</p>
@@ -82,7 +84,10 @@
                     </button>
                 </article>
 
-                <article class="product-card">
+                <article class="product-card product-card--new">
+                    <img class="product-card__image" src="images/switches.svg" width="400" height="200"
+                        alt="Набор механических свитчей Linear Red">
+                    <span class="product-card__badge">Новинка</span>
                     <h3 class="product-card__title">Набор свитчей Linear Red</h3>
                     <p class="product-card__description">40 линейных свитчей с плавным ходом для тихой печати.</p>
                     <p class="product-card__price">Цена: 1 890 руб.</p>
@@ -103,15 +108,32 @@
                 Нажмите «Заказать» в карточке товара — откроется форма заявки.
                 Укажите контакты и удобную дату связи, менеджер перезвонит
                 и поможет подобрать свитчи под ваш стиль печати.
+                Можно также заполнить <a href="order.html">форму на отдельной странице</a>.
             </p>
         </aside>
     </main>
 
     <footer class="site-footer" id="contacts">
-        <p class="site-footer__text">
-            Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a>,
-            e-mail: <a href="mailto:info@example.com">info@example.com</a>
-        </p>
+        <div class="site-footer__inner">
+            <div class="site-footer__col">
+                <p class="site-footer__text">
+                    Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a>
+                </p>
+                <p class="site-footer__text">
+                    E-mail: <a href="mailto:info@example.com">info@example.com</a>
+                </p>
+            </div>
+
+            <nav class="site-footer__col" aria-label="Разделы сайта">
+                <ul class="site-footer__list">
+                    <li><a href="index.html#advantages">Преимущества</a></li>
+                    <li><a href="index.html#popular">Популярные товары</a></li>
+                    <li><a href="catalog.html#keyboards">Клавиатуры</a></li>
+                    <li><a href="catalog.html#parts">Свитчи и кейкапы</a></li>
+                </ul>
+            </nav>
+        </div>
+
         <p class="site-footer__text">&copy; 2026 KeyCraft. Учебный проект.</p>
         <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
@@ -215,6 +237,8 @@
             </div>
         </form>
     </dialog>
+
+    <a class="scroll-top" href="#top">Наверх</a>
 </body>
 
 </html>
