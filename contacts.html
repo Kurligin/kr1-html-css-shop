@@ -10,63 +10,75 @@
 </head>
 
 <body>
-    <header>
-        <div class="site-header">
-            <a class="site-logo" href="index.html">KeyCraft</a>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a class="site-header__logo" href="index.html">KeyCraft</a>
 
             <nav class="site-nav" aria-label="Основная навигация">
                 <ul class="site-nav__list">
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="catalog.html">Каталог</a></li>
-                    <li><a href="contacts.html">Контакты</a></li>
-                    <li><a href="index.html#advantages">Преимущества</a></li>
-                    <li><a href="index.html#popular">Популярные товары</a></li>
-                    <li><a href="index.html#contacts">Обратная связь</a></li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html">Главная</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="catalog.html">Каталог</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link site-nav__link--active" aria-current="page" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+                    </li>
+                    <li class="site-nav__item">
+                        <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main class="page">
         <nav class="breadcrumbs" aria-label="Навигационная цепочка">
-            <a href="index.html">Главная</a>
-            <span>Контакты</span>
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
+            <span class="breadcrumbs__current">Контакты</span>
         </nav>
 
         <section class="section">
-            <h1>Контакты</h1>
+            <h1 class="section__title">Контакты</h1>
             <p>
                 Поможем подобрать клавиатуру, свитчи и кейкапы.
                 В шоуруме можно попробовать клавиатуры перед покупкой.
             </p>
 
             <address class="contacts-list">
-                <ul>
-                    <li>Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a></li>
-                    <li>E-mail: <a href="mailto:info@example.com">info@example.com</a></li>
-                    <li>Шоурум: г. Москва (учебный проект)</li>
-                    <li>Часы работы: ежедневно с 10:00 до 20:00</li>
+                <ul class="contacts-list__items">
+                    <li class="contacts-list__item">Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a></li>
+                    <li class="contacts-list__item">E-mail: <a href="mailto:info@example.com">info@example.com</a></li>
+                    <li class="contacts-list__item">Шоурум: г. Москва (учебный проект)</li>
+                    <li class="contacts-list__item">Часы работы: ежедневно с 10:00 до 20:00</li>
                 </ul>
             </address>
         </section>
 
         <section class="section" id="feedback">
-            <h2>Обратная связь</h2>
+            <h2 class="section__title">Обратная связь</h2>
             <p>
                 Чтобы оставить заявку, выберите товар на главной странице
                 и нажмите «Заказать» — откроется форма заявки.
             </p>
-            <a class="button" href="index.html#popular">Перейти к товарам</a>
+            <a class="button button--primary" href="index.html#popular">Перейти к товарам</a>
         </section>
     </main>
 
-    <footer id="contacts">
-        <p>
+    <footer class="site-footer" id="contacts">
+        <p class="site-footer__text">
             Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a>,
             e-mail: <a href="mailto:info@example.com">info@example.com</a>
         </p>
-        <p>&copy; 2026 KeyCraft. Учебный проект.</p>
-        <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+        <p class="site-footer__text">&copy; 2026 KeyCraft. Учебный проект.</p>
+        <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
     </footer>
 </body>
 
